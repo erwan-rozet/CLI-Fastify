@@ -1,7 +1,7 @@
 {
   "name": "fastify-cli",
   "version": "1.0.0",
-  "description": "Fastify CLI to generate module",
+  "description": "Fastify CLI to generate module and associated files",
   "main": "fst.js",
   "bin": {
     "fst": "./fst.js"

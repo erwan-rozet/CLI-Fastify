@@ -4,15 +4,20 @@ const fs = require("fs-extra");
 const path = require("path");
 const { program } = require("commander");
 
-program
-  .version("1.0.0")
-  .description("CLI pour créer un nouveau module Fastify");
+program.version("1.0.0").description("CLI to create a new Fastify module");
 
 program
   .command("create <moduleName>")
-  .description("Crée un nouveau module avec les fichiers associés")
+  .description("Create a new module with associated files")
   .action((moduleName) => {
     const moduleDirectory = path.join(__dirname, moduleName);
+    // Vérifier si le module existe déjà
+    if (fs.existsSync(moduleDirectory)) {
+      console.error(
+        `\n ⚠️   Choose another module name, ${moduleName} already exists. \n`
+      );
+      return;
+    }
     fs.mkdirSync(moduleDirectory);
 
     const templateDirectory = path.join(__dirname, "templates");
@@ -29,7 +34,7 @@ program
       fs.writeFileSync(filePath, fileContent);
     });
 
-    console.log(`Le module ${moduleName} a été créé avec succès.`);
+    console.log(`${moduleName} module successfully created.`);
   });
 
 program.parse(process.argv);
