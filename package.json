@@ -1,0 +1,17 @@
+{
+  "name": "fastify-cli",
+  "version": "1.0.0",
+  "description": "Fastify CLI to generate module",
+  "main": "fst.js",
+  "bin": {
+    "fst": "./fst.js"
+  },
+  "scripts": {
+    "fst": "node fst.js"
+  },
+  "author": "Erwan",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "commander": "^8.3.0"
+  }
+}
