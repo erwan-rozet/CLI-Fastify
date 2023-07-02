@@ -9,7 +9,7 @@
   "scripts": {
     "fst": "node fst.js"
   },
-  "author": "Erwan",
+  "author": "Erwan Rozet",
   "dependencies": {
     "fs-extra": "^10.0.0",
     "commander": "^8.3.0"
