@@ -1,1 +1,6 @@
-// schema file boiler plate code here...
+/*
+
+schema file 
+template code goes here...
+
+*/

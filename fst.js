@@ -34,7 +34,7 @@ program
       fs.writeFileSync(filePath, fileContent);
     });
 
-    console.log(`${moduleName} module successfully created.`);
+    console.log(`\n ${moduleName} module successfully created.\n`);
   });
 
 program.parse(process.argv);
